@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<title>KCRW 2015 Song Playcount</title>
+{% include 'header.html' %}
+
+<body class="boxed-layout container">
+<div class="wrapper">
+
+{% include 'navbar.html' %}
+<div class="container content">
+    <div class="headline"><h2>See song play history from DJs on KCRW</h2></div>
+    <!-- Service Blocks -->
+    <div class="row margin-bottom-30">
+        <div class="col-md-4">
+            <div class="row margin-bottom-30">
+                <div class="col-md-12">
+                    <div class="service">
+                        <h3><i class="fa fa-search"></i> Search by song title:</h3>
+                        <p>Don't worry about capitalization.</p>
+                        <form action="/search" method="POST">
+                            <input type="text" name="text">
+                            <input type="submit" name="my-form" value="Send">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row margin-bottom-30">
+                <div class="col-md-12">
+                    <div class="service">
+                        <h3><i class="fa fa-headphones"></i> Playcount</h3>
+                        <p><b>{{ song }}</b> was played <b>{{ songCount }}</b> total times on KCRW during 2015.</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+<!--             <div class="row margin-bottom-30">
+                <div class="col-md-12">
+                    <div class="service">
+                        <h3><i class="fa fa-info"></i> Other info...</h3>
+                        <p>poop</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="col-md-8">
+            <div class="service">
+                <div class='matplotlib'>
+                    <img src="static/year_track_summary/{{plotPng}}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Works -->
+    <div class="headline"><h2>See other examples...</h2></div>
+    <div class="row margin-bottom-20">
+        {% for preview in previewPng %}
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnails thumbnail-style">
+                <div class="thumbnail-img">
+                    <div class="overflow-hidden">
+                        <a href="{{ site_url}}/search?title={{ previewList[loop.index0] }}">
+                            <img class="img-responsive" src="static/year_track_summary/{{preview}}" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- End Recent Works -->
+
+</div><!--/container-->
+
+{% include 'footer.html' %}
+</div><!--/wrapper-->
+</body>
+</html>

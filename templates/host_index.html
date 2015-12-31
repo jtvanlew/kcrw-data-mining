@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<title>KCRW 2015 Host List</title>
+{% include 'header.html' %}
+
+<body class="boxed-layout container">
+<div class="wrapper">
+
+
+{% include 'navbar.html' %}
+
+<!--DJ top picks-->
+<div class="container content">
+    {% for key,parent_dict_item in dj_top10s.items() %}
+    <div class="col-md-4">
+        <div class="service">
+            <h1> {{ parent_dict_item[3]['name'] }}</h1> 
+            <a href='hosts/{{ key }}'><img class="img-responsive" src="static/{{ parent_dict_item[2]['host_image'] }}"></a>
+        </div>
+    </div>         
+    {% endfor %}
+    <!--/DJ top picks-->
+
+</div><!--/container-->
+{% include 'footer.html' %}
+</div><!--/wrapper-->
+</body>
+</html>

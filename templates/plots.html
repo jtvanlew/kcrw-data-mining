@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<title>KCRW 2015 Host</title>
+{% include 'header.html' %}
+
+
+<body class="boxed-layout container">
+<div class="wrapper">
+
+{% include 'navbar.html' %}
+
+
+<!--DJ top picks-->
+<div class="container content">
+    {% for pic in pics %}  
+    <div class="col-md-4">
+        <a href="{{ site_url }}/static/year_track_summary/{{ pic }}"><img class="img-responsive" src="{{ site_url }}/static/year_track_summary/{{ pic }}"></a>
+    </div>
+    {% endfor %}  
+</div><!--/container-->
+
+{% include 'footer.html' %}
+</div><!--/wrapper-->
+</body>
+</html>

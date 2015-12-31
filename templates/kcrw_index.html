@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<title>KCRW 2015 Cumulative List</title>
+{% include 'header.html' %}
+
+<body class="boxed-layout container">
+<div class="wrapper">
+
+
+{% include 'navbar.html' %}
+
+<!--DJ top picks-->
+<div class="container content">
+	<div class="col-md-4">
+	    <div class="headline"><h2> KCRW Data</h2></div>
+	    <p>
+	    	This data is collected from the <a href="http://www.kcrw.com">KCRW website</a>. Each KCRW host provides a detailed playlist of their show. The data is entered by hand (I assume) so what I have shown here is tallies of at least <i>the same names</i> and might not be a complete and true representation of actual playcounts. For instance, I saw <b>Tame Impala</b> in the database as <b>Tame Imapala</b> at least half a dozen times. And, geez, <b>Unknown Mortal Orchestra</b> was brutalized with probably 5 different spellings. I tried to also tally which hosts most often put in artist names with spell errors (I'm looking at you, Garth Trinidad) but it became a huge headache because, like, which name entry is correct in a simple case when I'm automatically processing and someone uses "&amp;" vs "and" (oh, and also, I'm not smart enough to just lump those together)?
+	    </p>
+	    <p>
+		    I did create the ability to <a href="{{ site_url }}/search">search for a song</a> played by KCRW so you can see its rise and fall in popularity and which DJs were playing it during the year. I have example plots for KCRW's top-10 songs at the bottom of this page. I also save the image every time anyone searches on this site and they're automatically listed on my <a href="{{ site_url }}/plots">Examples page</a>.
+	    </p>
+	    <p>
+		    Finally, there's a page which I wanted to create as a response to <a href="http://www.kcrw.com/music/top-10-albums-of-2015">KCRW's own "Top 10 Albums" lists</a> from each DJ. Unfortunately, on KCRW the DJs are often playing their own copy of advance releases or singles that they've been given. So in their database, the album listed for the vast majority of tracks is something like '12" single', etc. Because that meant I couldn't actually make plots of top 10 albums, I did make plots of top 10 songs and top 10 artists from each DJ. <a href="{{ site_url }}/hosts">Find the index of each DJ here</a>.
+	    </p>
+	</div>
+	<div class="col-md-8">
+	    <div class="col-md-12">
+	        <div class="headline"><h2> Top 10 Songs</h2></div>
+	        <div class="service">
+	            <img class="img-responsive" src="{{ site_url }}/static/{{ kcrw_top10s[3]['top_10_songs_chart'] }}">
+	        </div>
+	    </div>
+	    <div class="col-md-12">
+	        <div class="headline"><h2> Top 10 Artists</h2></div>
+	        <div class="service">
+	            <img class="img-responsive" src="{{ site_url }}/static/{{ kcrw_top10s[1]['top_10_artists_chart'] }}">
+	        </div>
+	    </div>
+	</div>
+	<div class="col-md-12">
+		<div class="headline"><h2> Top 10 Songs' Play History</h2></div>
+		{% for plot in historyPlots %}
+			<div class="col-md-6">
+				<div class="headline"><h2> Number {{ 10-loop.index0 }} </h2></div>
+				<div class="service">
+		            <img class="img-responsive" src="{{ site_url }}/static/{{ plot }}">
+		        </div>
+	    	</div>
+		{% endfor %}
+	</div>
+</div><!--/container-->
+{% include 'footer.html' %}
+</div><!--/wrapper-->
+</body>
+</html>
