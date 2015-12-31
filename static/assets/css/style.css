@@ -75,7 +75,7 @@ label {
 }
 
 a {
-   color: #72c02c;
+   color: #8edbe5;
    text-decoration: none;  
 }
 
@@ -89,7 +89,7 @@ a:focus {
   text-decoration: none;
 }
 a:hover {
-   color: #72c02c;
+   color: #8edbe5;
    text-decoration: underline;
 }
 
@@ -186,7 +186,7 @@ a:hover {
 .service .service-icon {
 	float: left;
 	padding: 10px;
-	color: #72c02c;
+	color: #8edbe5;
 	font-size: 35px;  
 	text-align: center;
     -webkit-transition: all 0.4s ease-in-out;
@@ -253,7 +253,7 @@ a:hover {
 }
 
 .recent-work a:hover span {
-	border-bottom: solid 2px #72c02c;
+	border-bottom: solid 2px #8edbe5;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -410,7 +410,7 @@ a.thumbnail {
 
 .thumbnail h3 a:hover,
 .thumbnail-style h3 a:hover {
-	color: #72c02c;
+	color: #8edbe5;
 	text-decoration: none;
 }
 
@@ -425,7 +425,7 @@ a.thumbnail {
 	color: #fff;
 	padding: 1px 6px;
 	position: absolute;
-	background: #72c02c;
+	background: #8edbe5;
 	display: inline-block; 
 }
 .thumbnail-style a.btn-more:hover {
@@ -519,14 +519,14 @@ a.thumbnail {
 }
 
 .posts .dl-horizontal dd a:hover { 
-	color: #72c02c; 
+	color: #8edbe5; 
 	text-decoration: none;
 }
 
 .posts .dl-horizontal:hover dt img,
 .posts .dl-horizontal:hover dd a { 
-	color: #72c02c;
-	border-color: #72c02c !important;
+	color: #8edbe5;
+	border-color: #8edbe5 !important;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
@@ -561,7 +561,7 @@ a.thumbnail {
 
 .team ul.team-socail li i:hover {
 	color: #fff;
-	background: #72c02c;
+	background: #8edbe5;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
@@ -581,7 +581,7 @@ a.thumbnail {
 }
 
 .team .thumbnail-style:hover h3 a {
-	color: #72c02c !important;
+	color: #8edbe5 !important;
 }
 
 .team .thumbnail-style small {
@@ -644,7 +644,7 @@ a.thumbnail {
 	text-decoration: underline;
 }
 .privacy a:hover {
-	color: #72c02c;
+	color: #8edbe5;
 	text-decoration: none;
 }
 
@@ -700,7 +700,7 @@ ul.blog-tags a i {
 }
 
 ul.blog-tags a:hover {
-	background: #72c02c;
+	background: #8edbe5;
 }
 
 ul.blog-tags a:hover,
@@ -725,7 +725,7 @@ ul.blog-tags a:hover i {
 }
 
 .blog-photos li img:hover {
-	box-shadow: 0 0 0 2px #72c02c;
+	box-shadow: 0 0 0 2px #8edbe5;
 }
 
 /*Blog Latest Tweets*/
@@ -773,11 +773,11 @@ ul.blog-tags a:hover i {
 }
 
 .blog-twitter .blog-twitter-inner:hover {
-	border-color: #72c02c;
-	border-top-color: #72c02c;	
+	border-color: #8edbe5;
+	border-top-color: #8edbe5;	
 }
 .blog-twitter .blog-twitter-inner:hover:after {
-	border-top-color: #72c02c;	
+	border-top-color: #8edbe5;	
 }
 
 .blog-twitter .blog-twitter-inner span.twitter-time {
@@ -787,7 +787,7 @@ ul.blog-tags a:hover i {
 }
 
 .blog-twitter .blog-twitter-inner a {
-	color: #72c02c;
+	color: #8edbe5;
 	text-decoration: none;
 }
 .blog-twitter .blog-twitter-inner a:hover {
@@ -806,7 +806,7 @@ ul.blog-tags a:hover i {
 	margin-bottom: 6px;
 }
 .who li i { 
-	color: #72c02c; 
+	color: #8edbe5; 
 	font-size: 13px;
 	min-width: 15px;
 	margin-right: 8px;
@@ -875,7 +875,7 @@ ul.blog-tags a:hover i {
 
 .promo-box:hover strong, 
 .promo-box:hover strong a {
-	color: #72c02c;
+	color: #8edbe5;
 }
 
 /*Promo Service*/
@@ -938,7 +938,7 @@ ul.blog-tags a:hover i {
 }
 
 .info-blocks:hover i.icon-info-blocks {
-	color: #72c02c;
+	color: #8edbe5;
     -webkit-transition:all 0.2s ease-in-out;
     -moz-transition:all 0.2s ease-in-out;
     -o-transition:all 0.2s ease-in-out;
@@ -1040,7 +1040,7 @@ ul.labels-demo li {
 }
 
 .line-icon-page .item:hover {
-	color: #72c02c;
+	color: #8edbe5;
 }
 
 /*Line Icon Page
@@ -1114,7 +1114,7 @@ ul.labels-demo li {
 }
 
 .bs-glyphicons li:hover {
-	color: #72c02c;
+	color: #8edbe5;
 	background-color: #fafafa;
 }
 
@@ -1510,7 +1510,7 @@ ul.labels-demo li {
 }
 
 .status-bar li i {
-	color: #72c02c;
+	color: #8edbe5;
 	margin-right: 5px;
 }
 
@@ -1553,7 +1553,7 @@ ul.labels-demo li {
 }
 
 .share-list li i {
-	color: #72c02c;
+	color: #8edbe5;
 	margin-right: 5px;
 }
 
@@ -1673,8 +1673,8 @@ img.img-mouse {
 }
 
 .testimonials-bs .carousel-control-v2 i:hover {
-  color: #72c02c;
-  border-color: #72c02c;
+  color: #8edbe5;
+  border-color: #8edbe5;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
