@@ -1,4 +1,7 @@
-//Masonry js functions
+/**
+ * Base js functions
+ */
+
 $(document).ready(function(){
     var $container = $('.grid-boxes');
 

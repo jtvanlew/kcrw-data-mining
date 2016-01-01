@@ -10,9 +10,9 @@ var MSfullWidth = function () {
 		        height:600,
 		        fullwidth:true,
 		        centerControls:false,
-		        speed:20,
+		        speed:18,
 		        view:'flow',
-				loop:true,
+				loop: true,
 		    });
 		    slider.control('arrows');
 		    slider.control('bullets' ,{autohide:false});
