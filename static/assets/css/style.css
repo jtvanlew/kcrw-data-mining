@@ -67,6 +67,15 @@ body.header-fixed-space-v2 {
 	}
 }
 
+.header .navbar-toggle {
+	border-color: #8edbe5;
+}
+.header .navbar-toggle,
+.header .navbar-toggle:hover, 
+.header .navbar-toggle:focus {
+	background: #8edbe5;
+	padding: 6px 10px 2px;
+}
 p, 
 li,
 li a,
