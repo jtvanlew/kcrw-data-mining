@@ -22,17 +22,41 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
-            <div class="headline"><h2> Top 10 Artists</h2></div>
+        {% if parent_dict_item[3]['name'] in dj_top10s_published  %}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="headline"><h2> Top 10s, Data</h2></div>
+                {% for key, item in parent_dict_item[0].count|dictsort(false, 'value')|reverse %}
+                    <div class="entry-{{ dj_top10s_data[hostname]['match'][key]|replace('.0','') }}">{{ loop.index }}. {{ key }} ({{ item }})</div>
+                {% endfor %}
+            </div>
+            
+            <div class="col-md-6">
+                <div class="headline"><h2> Top 10s, Chosen</h2></div>
+                {% for item in dj_top10s_published[parent_dict_item[3]['name']] %}
+                    <div class="entry-{{ item['match'] }}">{{ loop.index }}. {{ item['artist'] }} - {{ item['album'] }}</div>
+                {% endfor %}
+            </div>
+        </div>
+        <hr/>
+        {% endif %}
+<!--         <div class="col-md-12">
+            <div class="headline"><h2> Top 10 Artists Chart</h2></div>
             <div class="service">
                 <img class="img-responsive" src="{{ site_url }}/static/{{ parent_dict_item[1]['host_top_10_artists_chart'] }}">
             </div>
-        </div>
-        <div class="col-md-12">
-            <div class="headline"><h2> Top 10 Songs</h2></div>
+        </div> -->
+        <div class="col-md-8">
+            <div class="headline"><h2> Top 10 Songs Chart</h2></div>
             <div class="service">
                 <img class="img-responsive" src="{{ site_url }}/static/{{ parent_dict_item[5]['host_top_10_songs_chart'] }}">
             </div>
+        </div>
+        <div class="col-md-4">
+            <div class="headline"><h2> View song play history</h2></div>
+            {% for key, item in parent_dict_item[4].count|dictsort(false, 'value')|reverse %}
+                <div>{{ loop.index }}. <a href="{{ site_url}}/search?title={{ key }}">{{ key }}</a></div>
+            {% endfor %}
         </div>
         {% endif %}
     {% endfor %}

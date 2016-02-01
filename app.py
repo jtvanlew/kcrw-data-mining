@@ -8,7 +8,8 @@ from kcrwFuncs import *
 
 
 app = Flask(__name__)
-
+store = pandas.HDFStore('static/playlist-2015.h5')
+x = store['kcrw_df'] # load it back into x
 
 @app.route('/search', methods=['POST'])
 def my_form_post():
@@ -19,9 +20,7 @@ def my_form_post():
 @app.route('/search', methods=['GET', 'POST'])
 def indexPage(): 
     song = request.args.get('title')
-    print(song)
-    store = pandas.HDFStore('static/playlist-2015.h5')
-    x = store['kcrw_df'] # load it back into x
+
     if not song:
         plotPng = 'let-it-happen-2015.png'
         song = "Let It Happen"
@@ -34,8 +33,6 @@ def indexPage():
     previewList = ["Can't Keep Checking My Phone", "Heart Is Full", "Hot Coals", "By Fire"]
     with open('static/KCRW-top-10-2015.json') as data_file:    
         dj_info = json.load(data_file)
-    del x
-    store.close()
 
     return(render_template(
         'figures.html',
@@ -69,9 +66,15 @@ def hostIndex():
 def hostPage(hostname):
     with open('static/KCRW-top-10-2015.json') as data_file:    
         dj_info = json.load(data_file)
+    with open('static/published_kcrw_dj_top_10s_2015.json') as data_file:    
+        dj_info_published = json.load(data_file)
+    with open('static/data_kcrw_dj_top_10s_2015.json') as data_file:    
+        dj_info_data = json.load(data_file)
     return(render_template(
         'host.html',
         dj_top10s=dj_info,
+        dj_top10s_data=dj_info_data,
+        dj_top10s_published=dj_info_published,
         hostname=hostname))
 
 @app.route('/plots')  

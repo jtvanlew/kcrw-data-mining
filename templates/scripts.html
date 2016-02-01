@@ -1,11 +1,23 @@
 <!-- JS Global Compulsory -->
-<script type="text/javascript" src="static/assets/plugins/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="static/assets/plugins/jquery/jquery-migrate.min.js"></script>
-<script type="text/javascript" src="static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ site_url }}/static/assets/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="{{ site_url }}/static/assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="{{ site_url }}/static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- JS Implementing Plugins -->
-<script type="text/javascript" src="static/assets/plugins/back-to-top.js"></script>
-<script type="text/javascript" src="static/assets/plugins/smoothScroll.js"></script>
+<script type="text/javascript" src="{{ site_url }}/static/assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="{{ site_url }}/static/assets/plugins/smoothScroll.js"></script>
 <!-- JS Customization -->
-<script type="text/javascript" src="static/assets/js/custom.js"></script>
+<script type="text/javascript" src="{{ site_url }}/static/assets/js/custom.js"></script>
 <!-- JS Page Level -->
-<script type="text/javascript" src="static/assets/js/app.js"></script>
+<script type="text/javascript" src="{{ site_url }}/static/assets/js/app.js"></script>
+<!-- For making connectors -->
+<!-- <script type="text/javascript" src="{{ site_url }}/static/assets/js/jsPlumb-2.0.6.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+	 jsPlumb.bind("ready", function() {
+	    var e0 = jsPlumb.addEndpoint("#0"),
+	    e1 = jsPlumb.addEndpoint("#1r");
+
+	    jsPlumb.connect({ source:e0, target:e1 });
+	 });
+}, false);
+</script> -->
